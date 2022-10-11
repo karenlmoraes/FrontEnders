@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Pavanam&display=swap');
+
+/* Reset de configuração */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #AC2C2C;
+    padding: 20px 50px;
+}
+
+/* Botões padronizados */
+
+button {
+    background-color: #AC2C2C;
+    padding: 4px 16px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+button a {
+    color: white;
+}
+
+button a:hover {
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #E33A3A;
+    transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* LOGO  */
+
+.logo {
+    font-family: 'Pavanam', sans-serif;
+    font-weight: lighter;
+    font-size: 35px;
+    color: white;
+}
+
+span {
+    color: #FFF689;
+}
+
+/* NAVBAR  */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navlink {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.navlink:hover {
+    color: #FFF689;
+    transition: 0.3s;
+}
+
+/* BOTÕES */
+
+.botaonav {
+    background-color: #E33A3A;
+    padding: 4px 16px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.botaonav a {
+    color: white;
+}
+
+.botaonav a:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.botaonav:hover {
+    background-color: #FFF689;
+    transition: 0.3s;
+}
+
+/* Main top  */
+
+.cont-1 {
+    background-image: url(/IMG/Background-home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
+}
+
+.cont-adj {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3%;
+    width: 50%;
+}
+
+.cont-1 p {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+}
+
+/* Main middle  */
+
+.cont-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 20px;
+}
+
+.cont-2-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.cont-2 p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    margin-left: 3%;
+    text-align: center;
+}
+
+.cont-2 button {
+    margin-left: 3%;
+    font-size: 30px;
+}
+
+.cont-2 img {
+    width: 600px;
+}
+
+/* FOOTER  */
+
+footer {
+    background-color: #E33A3A;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    gap: 300px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+.sec-1 h4 {
+    font-size: 20px;
+}
+
+.sec-2 a {
+    font-weight: 700;
+    color: white;
+    font-size: 18px;
+}
+
+.sec-2 a:hover {
+    color: #FFF689;
+    transition: 0.3s;
+}
+
+.sec-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec-3 h4 {
+    font-family: 'Pavanam', sans-serif;
+    font-weight: lighter;
+    font-size: 35px;
+}
+
+.sec-3 a {
+    margin: 10px;
+    color: white;
+    font-size: 40px;
+}
+
+.sec-3 a:hover {
+    color: #AC2C2C;
+    transition: 0.3s;
+}
+
+.atribution {
+    background-color: #AC2C2C;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+}
