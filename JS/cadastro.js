@@ -30,20 +30,21 @@ campo_cep.addEventListener('change', (busca_cep) =>{
 })
 
 cadastrar.addEventListener('click', (conferir) => {
-    let valor_nome = document.forms['formulario']['nome'].value;
-    let valor_email = document.forms['formulario']['email'].value;
-    let valor_senha = document.forms['formulario']['senha'].value;
-    let valor_c_senha = document.forms['formulario']['c_senha'].value;
-    let valor_rg = document.forms['formulario']['rg'].value;
-    let valor_cep = document.forms['formulario']['cep'].value;
-    let valor_uf = document.forms['formulario']['uf'].value;
-    let valor_cidade = document.forms['formulario']['cidade'].value;
-    let valor_bairro = document.forms['formulario']['bairro'].value;
-    let valor_rua = document.forms['formulario']['rua'].value;
-    let valor_numero = document.forms['formulario']['numero'].value;
-    let valor_complemento = document.forms['formulario']['complemento'].value;
-    
-    if (valor_nome == '' || valor_email == '' || valor_senha == '' || valor_c_senha == '' || valor_rg == '' || valor_cep == '' || valor_uf == '' || valor_cidade == '' || valor_bairro == '' || valor_rua == '' || valor_numero == '' || valor_complemento == '') {
+    let campos = [document.forms['formulario']['nome'].value, 
+    document.forms['formulario']['email'].value, 
+    document.forms['formulario']['senha'].value, 
+    document.forms['formulario']['c_senha'].value,
+    document.forms['formulario']['rg'].value,
+    document.forms['formulario']['cep'].value,
+    document.forms['formulario']['uf'].value,
+    document.forms['formulario']['cidade'].value,
+    document.forms['formulario']['bairro'].value,
+    document.forms['formulario']['rua'].value,
+    document.forms['formulario']['numero'].value,
+    document.forms['formulario']['complemento'].value,
+    ]
+
+    if (campos.includes('')){
         alert('Preencha todos os campos, por favor.');
     } else {
         alert('Parabéns, você acaba de entrar na lista de espera!');
