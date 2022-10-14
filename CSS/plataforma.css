@@ -169,28 +169,15 @@ footer {
     padding: 10px;
 }
 
-/* Cadastro */
-#cadastro {
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
+/* Search */
 input {
     width: 15rem;
     padding: 0.5rem;
     margin: 0.5rem;
 }
 
-/* Remover setas do tipo number */
-input[type=number] {
-    -moz-appearance:textfield;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+#div_search {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
