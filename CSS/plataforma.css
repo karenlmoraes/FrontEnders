@@ -181,3 +181,21 @@ input {
     justify-content: center;
     flex-wrap: wrap;
 }
+.autoComplete_search {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.autoComplete{
+    width: 28%;
+    max-height:100px ;
+    overflow: auto;
+}
+
+.autoComplete li{
+     padding: 15px;
+     width: calc(100% - 30px);
+     cursor: pointer;
+     font-weight: bold;
+}

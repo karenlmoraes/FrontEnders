@@ -1,4 +1,8 @@
 const search_button = document.querySelector('#search');
+const search_list = document.querySelector('#input_term');
+const autoComplete_list = document.querySelector('#autoComplete_list');
+
+
 
 search_button.addEventListener('click', (search) => {
     let crypto_id = document.querySelector("#input_term").value;
@@ -55,3 +59,50 @@ search_button.addEventListener('click', (search) => {
         // document.body.append(name_text, description_text);
     })
 })
+
+
+
+
+let array_list = [];
+//buscas de id na api
+function fetchId(){
+    fetch("https://api.coingecko.com/api/v3/coins/")
+    .then((Response) => Response.json())
+    .then((data) => { //map pega doso os nomes e joga no arrey
+        array_list = data.map((get) => get.id)
+        console.log(array_list)
+        loadData(array_list, autoComplete_list)
+    })
+}
+
+//mostras nomes atraves dom
+function loadData(data, element){
+    if (data){
+        element.innerHTML = "";
+        let innerElement = "";
+        data.forEach((item) => {
+            innerElement += `<li onclick="copyAndShow('${item}')" >${item}</li>`;
+        });
+        element.innerHTML = innerElement;
+    }
+}
+
+// filtar nomes somente digitados no input
+function filterData(data, searchText){
+    return data.filter((x) => x.toLowerCase().includes(searchText.toLowerCase()));
+}
+
+
+//pega input do dom
+search_list.addEventListener("input", function(){
+   const filtereData = filterData(array_list, search_list.value)
+   loadData(filtereData,autoComplete_list)
+})
+
+
+fetchId()
+
+//copia valor do deli ejoga no input
+function copyAndShow(item){
+    search_list.value = item
+}

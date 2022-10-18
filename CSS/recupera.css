@@ -29,10 +29,13 @@ button {
     font-size: 20px;
     color: white;
     cursor: pointer;
+
+
 }
 
 button a {
     color: white;
+    text-decoration: none;
 }
 
 button a:hover {
@@ -71,6 +74,7 @@ nav {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 17px;
+    text-decoration: none;
 }
 
 .navlink:hover {
@@ -89,10 +93,12 @@ nav {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 17px;
+
 }
 
 .botaonav a {
     color: white;
+
 }
 
 .botaonav a:hover {
@@ -103,6 +109,33 @@ nav {
 .botaonav:hover {
     background-color: #FFF689;
     transition: 0.3s;
+}
+
+/* MAIN */
+
+.text-1 {
+    background-color: #E33A3A;
+    height: 150px;
+}
+
+main {
+    margin-top: -5%;
+
+}
+
+.input {
+    background-color: #D9D9D9 !important;
+}
+
+.cont-1 {
+    height: 25vh;
+}
+
+.img {
+    background-image: url(/IMG/Background-home3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vh;
 }
 
 /* FOOTER  */
