@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/recupera.css">
     <script src="https://kit.fontawesome.com/25bc4345e8.js" crossorigin="anonymous"></script>
     <title>Recuperar Senha</title>
@@ -24,14 +25,25 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Formulário de recuperação de senha</h1>
-        <ul>
-            <li>Campo para escrever o email (tem que validar)</li>
-            <li>Botão Recuperar</li>
-            <li>Exibir mensagem que email de recuperação foi enviado</li>
-        </ul>
-    </main>
+    <div class="container-fluid text-1">
+        <h2 class="text-center pt-5 text-light">Esqueceu sua senha?<br>
+        Enviaremos um e-mail com instruções de como redefinir sua senha.</h2>
+   </div>
+   <div class="img"></div>
+   <main class="container-fluid cont-1"  >
+       <div class="row justify-content-center ">
+          
+           <form class="col-md-6 me-5 ms-5 mb-5" form-group" id="form">
+               <div class="alert alert-success alert-dismissible fade show" id="alert" style="display: none ">
+                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                     <strong>Email de recuperação enviado com sucesso!</strong>
+               </div>
+                   <label for="email" class="form-label">E-mail</label>
+                   <input type="email" class="form-control input" id="email" placeholder="Email" required>
+                   <div class="valid-feedback">válido.</div>
+                   <div class="invalid-feedback">Por favor, insira um endereço de email válido.</div>
+               <button type="submit" class="btn btn-danger col-12 my-4 rounded-5" id="btn">Enviar</button>
+           </form>
 
     <footer>
         <div class="footer">
@@ -67,4 +79,7 @@
         </div>
     </footer>
     </body>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/JS/recupera.js"></script>
     </html>
