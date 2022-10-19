@@ -159,6 +159,17 @@ span {
     width: 600px;
 }
 
+.cont-3 {
+    margin-top: 20px;
+    margin-top:30px;
+    height:   370px;
+    width: 300px !important;
+    border-radius: 0px 50px 0px 0px;
+    background-color:#E4D6D2;
+    box-shadow: 5px 5px 5px black;
+
+}
+
 /* FOOTER  */
 
 footer {
