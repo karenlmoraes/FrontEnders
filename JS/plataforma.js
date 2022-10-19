@@ -2,15 +2,19 @@ const search_button = document.querySelector('#search');
 const search_list = document.querySelector('#input_term');
 const autoComplete_list = document.querySelector('#autoComplete_list');
 
-
-
 search_button.addEventListener('click', (search) => {
     let crypto_id = document.querySelector("#input_term").value;
 
     fetch('https://api.coingecko.com/api/v3/coins/' + crypto_id).then(data => {
         return data.json();
     }).then(get => {
-        console.log(get);
+        //console.log(get);
+
+        //Formatação dos números
+        let realBR = Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+        })
 
         let name_tag = document.querySelector('#name');
         let name = get.name;
@@ -38,27 +42,54 @@ search_button.addEventListener('click', (search) => {
 
         let market_cap_rank_tag = document.querySelector('#market_cap_rank');
         let market_cap_rank = get.market_cap_rank;
-        market_cap_rank_tag.innerText = 'Ranking de capitalização de mercado: #' + market_cap_rank;
+        let markert_cap_value = realBR.format(get.market_data.market_cap.brl);
+        market_cap_rank_tag.innerText = 'Ranking de capitalização de mercado: #' + market_cap_rank + ' (' + markert_cap_value + ')';
 
         let current_price_tag = document.querySelector('#current_price');
-        let current_price = get.market_data.current_price.brl;
-        current_price_tag.innerText = 'Valor: R$ ' + current_price;
+        let current_price = realBR.format(get.market_data.current_price.brl);
+        current_price_tag.innerText = 'Valor: ' + current_price;
 
         let ath_tag = document.querySelector('#ath');
-        let ath = get.market_data.ath.brl;
+        let ath = realBR.format(get.market_data.ath.brl);
         let ath_cp = get.market_data.ath_change_percentage.brl;
         let ath_data = get.market_data.ath_date.brl;
-        ath_tag.innerText = 'Maior valor: R$ ' + ath + ' (' + ath_cp + '%)' + ' em: ' + ath_data;
+        ath_tag.innerText = 'Maior valor: ' + ath + ' (' + ath_cp + '%)' + ' em: ' + ath_data;
 
         let atl_tag = document.querySelector('#atl');
-        let atl = get.market_data.atl.brl;
+        let atl = realBR.format(get.market_data.atl.brl);
         let atl_cp = get.market_data.atl_change_percentage.brl;
         let atl_data = get.market_data.atl_date.brl;
-        atl_tag.innerText = 'Menor valor: R$ ' + atl + ' (' + atl_cp + '%)' + ' em: ' + atl_data;
+        atl_tag.innerText = 'Menor valor: ' + atl + ' (' + atl_cp + '%)' + ' em: ' + atl_data;
 
+        let max_supply_tag = document.querySelector('#max_supply');
+        let max_supply = Intl.NumberFormat('pt-BR').format(get.market_data.max_supply);
+        max_supply_tag.innerText = 'Fornecimento máximo: ' + max_supply;
 
+        let circulating_supply_tag = document.querySelector('#circulating_supply');
+        let circulating_supply = Intl.NumberFormat('pt-BR').format(get.market_data.circulating_supply);
+        circulating_supply_tag.innerHTML = 'Fornecimento circulante: ' + circulating_supply;
 
+        let twitter_followers_tag = document.querySelector('#twitter_followers');
+        let twitter_followers = Intl.NumberFormat('pt-BR').format(get.community_data.twitter_followers);
+        twitter_followers_tag.innerHTML = 'Seguidores no Twitter: ' + twitter_followers;
 
+        let reddit_subscribers_tag = document.querySelector('#reddit_subscribers');
+        let reddit_subscribers = Intl.NumberFormat('pt-BR').format(get.community_data.reddit_subscribers);
+        reddit_subscribers_tag.innerHTML = 'Membros no Reddit: ' + reddit_subscribers;
+
+        let forks_tag = document.querySelector('#forks');
+        let forks = Intl.NumberFormat('pt-BR').format(get.developer_data.forks);
+        forks_tag.innerHTML = 'Forks no GitHub: ' + forks;
+
+        let stars_tag = document.querySelector('#stars');
+        let stars = Intl.NumberFormat('pt-BR').format(get.developer_data.stars);
+        stars_tag.innerHTML = 'Estrelas no GitHub: ' + stars;
+
+        let subscribers_tag = document.querySelector('#subscribers');
+        let subscribers = Intl.NumberFormat('pt-BR').format(get.developer_data.subscribers);
+        subscribers_tag.innerHTML = 'Membros no GitHub: ' + subscribers;
+
+        show_category_title();
     //div info
       /* let info = document.querySelector('#info');
 
@@ -88,9 +119,6 @@ search_button.addEventListener('click', (search) => {
     })
 })
 
-
-
-
 let array_list = [];
 //buscas de id na api
 function fetchId() {
@@ -98,7 +126,7 @@ function fetchId() {
         .then((Response) => Response.json())
         .then((data) => { //map pega doso os nomes e joga no arrey
             array_list = data.map((get) => get.id)
-            console.log(array_list)
+            //console.log(array_list)
             loadData(array_list, autoComplete_list)
         })
 }
@@ -120,17 +148,22 @@ function filterData(data, searchText) {
     return data.filter((x) => x.toLowerCase().includes(searchText.toLowerCase()));
 }
 
-
 //pega input do dom
 search_list.addEventListener("input", function () {
     const filtereData = filterData(array_list, search_list.value)
     loadData(filtereData, autoComplete_list)
 })
 
-
 fetchId()
 
 //copia valor do deli ejoga no input
 function copyAndShow(item) {
     search_list.value = item
+}
+
+function show_category_title(){
+    //Visualizalão do título da categoria
+    // document.querySelector('.category_title').style.display='flex';
+
+    document.querySelectorAll('.category_title').forEach(i=>i.style.display='flex');
 }
