@@ -18,9 +18,9 @@ header {
 
 /* Botões padronizados */
 
-button {
+.btn-default {
     background-color: #AC2C2C;
-    padding: 4px 16px;
+    padding: 4px 50px;
     border: none;
     border-radius: 50px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -31,17 +31,18 @@ button {
     cursor: pointer;
 }
 
-button a {
+.btn-default a {
     color: white;
+    text-decoration: none;
 }
 
-button a:hover {
+.btn-default a:hover {
+    color: white;
     transition: 0.3s;
 }
 
-button:hover {
+.btn-default:hover {
     background-color: #E33A3A;
-    transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -60,17 +61,13 @@ span {
 
 /* NAVBAR  */
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
 .navlink {
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 17px;
+    text-decoration: none;
+    margin: 0px 10px;
 }
 
 .navlink:hover {
@@ -89,10 +86,12 @@ nav {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 17px;
+    margin: 0px 10px;
 }
 
 .botaonav a {
     color: white;
+    text-decoration: none;
 }
 
 .botaonav a:hover {
@@ -108,7 +107,7 @@ nav {
 /* Main top  */
 
 .cont-1 {
-    background-image: url(/IMG/Background-home.png);
+    background-image: url(../IMG/Background-home.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 480px;
