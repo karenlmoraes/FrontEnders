@@ -8,10 +8,10 @@ campo_cep.addEventListener('change', (busca_cep) =>{
 
         }).then(get => {
             let resultado = JSON.stringify(get);
-            let resultado_uf = JSON.stringify(get.uf);
-            let resultado_cidade = JSON.stringify(get.localidade);
-            let resultado_bairro = JSON.stringify(get.bairro);
-            let resultado_rua = JSON.stringify(get.logradouro);
+            let resultado_uf = get.uf;
+            let resultado_cidade = get.localidade;
+            let resultado_bairro = get.bairro;
+            let resultado_rua = get.logradouro;
 
             let campo_uf = document.querySelector('#uf');
             let campo_cidade = document.querySelector('#cidade');
@@ -48,5 +48,6 @@ cadastrar.addEventListener('click', (conferir) => {
         alert('Preencha todos os campos, por favor.');
     } else {
         alert('Parabéns, você acaba de entrar na lista de espera!');
+        setTimeout(() => location.href = './login.html', 2000);
     }
 })

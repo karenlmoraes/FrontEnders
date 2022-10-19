@@ -104,6 +104,29 @@ span {
     transition: 0.3s;
 }
 
+/* MAiN */
+.text-1{
+    background-color:#E33A3A;
+    height: 100px;
+}
+
+main{
+    margin-top: -5%;
+}
+
+.img{
+    background-image: url(../IMG/Background-home3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vh;
+}
+
+.input {
+    background-color: #D9D9D9 !important;  
+}
+
+
+
 /* FOOTER  */
 
 footer {
@@ -185,7 +208,7 @@ input {
 
 /* Remover setas do tipo number */
 input[type=number] {
-    -moz-appearance:textfield;
+    -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
