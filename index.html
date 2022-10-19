@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/25bc4345e8.js" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
@@ -13,14 +14,30 @@
 <body>
     <header>
         <h1 class="logo">SAVE<span>COIN</span></h1>
-
-        <nav>
-            <a class="navlink" href="./index.html">HOME</a>
-            <a class="navlink" href="./contato.html">CONTATO</a>
-            <a class="navlink" href="./produtos.html">PRODUTOS</a>
-            <a class="navlink" href="./plataforma.html">PLATAFORMA</a>
-            <button class="botaonav"><a href="./login.html">LOGIN</a></button>
-            <button class="botaonav"><a href="./cadastro.html">CADASTRE-SE</a></button>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="navlink" aria-current="page" href="./index.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navlink" href="./contato.html#">CONTATO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navlink" href="./produtos.html">PRODUTOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navlink" href="./plataforma.html">PLATAFORMA</a>
+                  </li>
+                </ul>
+                <button class="botaonav"><a href="./login.html">LOGIN</a></button>
+                <button class="botaonav"><a href="./cadastro.html">CADASTRE-SE</a></button>
+              </div>
+            </div>
         </nav>
     </header>
 
@@ -30,17 +47,17 @@
             <div class="cont-adj">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 <br>
-                <button><a href="/produtos.html">Saiba mais +</a></button>
+                <button class="btn-default"><a href="./produtos.html">Saiba mais +</a></button>
             </div>        
         </div>
 
         <div class="cont-2">
-            <img src="/IMG/Finança-banner.png" alt="finança">
+            <img src="./IMG/Finança-banner.png" alt="finança">
 
             <div class="cont-2-box">
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque.</p>
                 <br>
-                <button><a href="/cadastro.html">Cadastre-se</a></button>
+                <button class="btn-default"><a href="./cadastro.html">Cadastre-se</a></button>
             </div>
         </div>
 
@@ -49,21 +66,21 @@
                 <h2>Standart</h2>
                 <p>Ut enim ad minim veniam, quis nostrud.</p>
                 <p>R$30,00</p>
-                <button>COMPRAR</button>
+                <button class="btn-default">COMPRAR</button>
             </div>
 
             <div>
                 <h2>Premium</h2>
                 <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
                 <p>R$90,00</p>
-                <button>COMPRAR</button>
+                <button class="btn-default">COMPRAR</button>
             </div>
 
             <div>
                 <h2>Deluxe</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p>R$120,00</p>
-                <button>COMPRAR</button>
+                <button class="btn-default">COMPRAR</button>
             </div>
         </div>
     </main>
@@ -101,5 +118,6 @@
             <p>Desenvolvido por FrontEnders © 2022</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
