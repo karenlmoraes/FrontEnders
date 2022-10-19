@@ -13,17 +13,37 @@
 
 <body>
     <header>
-        <h1 class="logo">SAVE<span>COIN</span></h1>
-
-        <nav>
-            <a class="navlink" href="./index.html">HOME</a>
-            <a class="navlink" href="./contato.html">CONTATO</a>
-            <a class="navlink" href="./produtos.html">PRODUTOS</a>
-            <a class="navlink" href="./plataforma.html">PLATAFORMA</a>
-            <button class="botaonav"><a href="./login.html">LOGIN</a></button>
-            <button class="botaonav"><a href="./cadastro.html">CADASTRE-SE</a></button>
-        </nav>
-    </header>
+        <div class="container-fluid"> 
+          <nav class="navbar navbar-expand-lg">
+                <h1 class="logo">SAVE<span>COIN</span></h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item">
+                      <a class="navlink" aria-current="page" href="./index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="navlink" href="./contato.html#">CONTATO</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="navlink" href="./produtos.html">PRODUTOS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="navlink" href="./plataforma.html">PLATAFORMA</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                      <button class="botaonav"><a href="./login.html">LOGIN</a></button>
+                    </li>
+                    <li class="nav-item mb-1">
+                      <button class="botaonav"><a href="./cadastro.html">CADASTRE-SE</a></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </nav>
+      </header>
 
     <div class="container-fluid text-1">
         <h2 class="text-center pt-5 text-light">Esqueceu sua senha?<br>
@@ -81,5 +101,5 @@
     </body>
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/JS/recupera.js"></script>
+    <script src="./JS/recupera.js"></script>
     </html>
