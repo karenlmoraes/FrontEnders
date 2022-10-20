@@ -133,62 +133,37 @@ footer {
     background-color: #E33A3A;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+#footer {
     font-family: 'Open Sans', sans-serif;
-    gap: 300px;
-    height: 200px;
     margin-top: 30px;
 }
 
-.sec-1 h4 {
+#sec-1 h5 {
     font-size: 20px;
+    font-weight: 700
 }
 
-.sec-2 a {
+#sec-2 a {
     font-weight: 700;
     color: white;
     font-size: 18px;
+    text-decoration: none;
 }
 
-.sec-2 a:hover {
+#sec-2 a:hover {
     color: #FFF689;
     transition: 0.3s;
 }
 
-.sec-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sec-3 h4 {
-    font-family: 'Pavanam', sans-serif;
-    font-weight: lighter;
-    font-size: 35px;
-}
-
-.sec-3 a {
+#sec-3 a {
     margin: 10px;
     color: white;
     font-size: 40px;
 }
 
-.sec-3 a:hover {
+#sec-3 a:hover {
     color: #AC2C2C;
     transition: 0.3s;
-}
-
-.atribution {
-    background-color: #AC2C2C;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    padding: 10px;
 }
 
 /* Cadastro */

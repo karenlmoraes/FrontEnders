@@ -46,19 +46,6 @@ header {
     transition: 0.3s;
 }
 
-/* LOGO  */
-
-.logo {
-    font-family: 'Pavanam', sans-serif;
-    font-weight: lighter;
-    font-size: 35px;
-    color: white;
-}
-
-span {
-    color: #FFF689;
-}
-
 /* NAVBAR  */
 
 .navlink {
@@ -110,21 +97,21 @@ span {
     background-image: url(../IMG/Background-home.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 480px;
+    height: 72vh;
 }
 
 .cont-adj {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 3%;
-    width: 50%;
+    padding: 5%;
+    width: 60%;
 }
 
 .cont-1 p {
     color: white;
     font-family: 'Open Sans', sans-serif;
-    font-size: 48px;
+    font-size: 38px;
 }
 
 /* Main middle  */
@@ -133,7 +120,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px 20px;
+    margin: 40px 20px 160px;
 }
 
 .cont-2-box {
@@ -159,66 +146,61 @@ span {
     width: 600px;
 }
 
+/* Main bottom  */
+
+.cont-3 {
+    margin-top: 20px;
+    margin-top:30px;
+    height:   370px;
+    width: 300px !important;
+    border-radius: 0px 50px 0px 0px;
+    background-color:#E3E3E3;
+    box-shadow: 3px 4px 3px rgba(90, 84, 84, 0.25);
+}
+
+.cont-3:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+    background-color: #F7F7F7;
+    box-shadow: 0 0 30px 10px #d6d6d6;
+
+}
+
 /* FOOTER  */
 
 footer {
     background-color: #E33A3A;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+#footer {
     font-family: 'Open Sans', sans-serif;
-    gap: 300px;
-    height: 200px;
-    margin-top: 30px;
+    margin-top: 160px;
 }
 
-.sec-1 h4 {
+#sec-1 h5 {
     font-size: 20px;
+    font-weight: 700
 }
 
-.sec-2 a {
+#sec-2 a {
     font-weight: 700;
     color: white;
     font-size: 18px;
+    text-decoration: none;
 }
 
-.sec-2 a:hover {
+#sec-2 a:hover {
     color: #FFF689;
     transition: 0.3s;
 }
 
-.sec-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sec-3 h4 {
-    font-family: 'Pavanam', sans-serif;
-    font-weight: lighter;
-    font-size: 35px;
-}
-
-.sec-3 a {
+#sec-3 a {
     margin: 10px;
     color: white;
     font-size: 40px;
 }
 
-.sec-3 a:hover {
+#sec-3 a:hover {
     color: #AC2C2C;
     transition: 0.3s;
-}
-
-.atribution {
-    background-color: #AC2C2C;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    padding: 10px;
 }
