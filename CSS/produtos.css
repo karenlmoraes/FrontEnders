@@ -104,6 +104,14 @@ span {
     transition: 0.3s;
 }
 
+/* Main */
+
+.img{
+    background-color:#E33A3A;
+    height: 130px;
+    width: 100%;
+   }
+
 /* FOOTER  */
 
 footer {

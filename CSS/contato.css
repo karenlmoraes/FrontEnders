@@ -105,7 +105,9 @@ span {
 }
 
 /*MAIN*/
-
+main{
+    height: 100vh;
+}
 .text-1 {
     background-color: #E33A3A;
     height: 150px;
