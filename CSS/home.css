@@ -46,19 +46,6 @@ header {
     transition: 0.3s;
 }
 
-/* LOGO  */
-
-.logo {
-    font-family: 'Pavanam', sans-serif;
-    font-weight: lighter;
-    font-size: 35px;
-    color: white;
-}
-
-span {
-    color: #FFF689;
-}
-
 /* NAVBAR  */
 
 .navlink {
