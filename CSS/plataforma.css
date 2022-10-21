@@ -9,9 +9,6 @@
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #AC2C2C;
     padding: 20px 50px;
 }
@@ -44,19 +41,6 @@ header {
 .btn-default:hover {
     background-color: #E33A3A;
     transition: 0.3s;
-}
-
-/* LOGO  */
-
-.logo {
-    font-family: 'Pavanam', sans-serif;
-    font-weight: lighter;
-    font-size: 35px;
-    color: white;
-}
-
-span {
-    color: #FFF689;
 }
 
 /* NAVBAR  */
