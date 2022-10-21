@@ -195,6 +195,10 @@ input {
     display: none;
 }
 
+#converter {
+    display: none;
+}
+
 .autoComplete_search {
     display: flex;
     justify-content: center;
@@ -212,4 +216,15 @@ input {
      width: calc(100% - 30px);
      cursor: pointer;
      font-weight: bold;
+}
+
+/* Remover setas do tipo number */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

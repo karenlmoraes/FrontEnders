@@ -1,6 +1,13 @@
 const search_button = document.querySelector('#search');
 const search_list = document.querySelector('#input_term');
 const autoComplete_list = document.querySelector('#autoComplete_list');
+const converter_button = document.querySelector('#converter_button');
+
+//Formatação dos números
+let realBR = Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+})
 
 search_button.addEventListener('click', (search) => {
     let crypto_id = document.querySelector("#input_term").value;
@@ -9,12 +16,6 @@ search_button.addEventListener('click', (search) => {
         return data.json();
     }).then(get => {
         //console.log(get);
-
-        //Formatação dos números
-        let realBR = Intl.NumberFormat('pt-BR', {
-            style: 'currency',
-            currency: 'BRL',
-        })
 
         let name_tag = document.querySelector('#name');
         let name = get.name;
@@ -90,6 +91,8 @@ search_button.addEventListener('click', (search) => {
         subscribers_tag.innerHTML = 'Membros no GitHub: ' + subscribers;
 
         show_category_title();
+
+        converter();
     //div info
       /* let info = document.querySelector('#info');
 
@@ -167,3 +170,49 @@ function show_category_title(){
 
     document.querySelectorAll('.category_title').forEach(i=>i.style.display='flex');
 }
+
+function show_converter(){
+    document.querySelector('#converter').style.display='initial';
+}
+
+function converter(){
+    let date = document.querySelector('#date').value;
+    let crypto_id = document.querySelector('#input_term').value;
+    let purchased_value = document.querySelector('#purchased_value').value
+
+    let current_price = 0;
+    let past_price = 0;
+    let result = 0;
+    let percentage_result = 0;
+    // console.log(date, crypto_id, purchased_value);
+
+    fetch('https://api.coingecko.com/api/v3/coins/' + crypto_id).then(data => {
+        return data.json();
+    }).then(get => {
+        // current_price = Intl.NumberFormat('pt-BR').format(get.market_data.current_price.brl);
+        current_price = get.market_data.current_price.brl;
+    })
+
+    fetch(`https://api.coingecko.com/api/v3/coins/${crypto_id}/history?date=${date}`).then(data => {
+        return data.json();
+    }).then(get => {
+        // past_price = Intl.NumberFormat('pt-BR').format(get.market_data.current_price.brl);
+        past_price = get.market_data.current_price.brl
+
+        // console.log(current_price);
+        // console.log(past_price);
+
+        result = purchased_value * (current_price / past_price);
+        percentage_result = current_price / past_price;
+
+        // console.log(result, percentage_result);
+
+        let conversion_result_tag = document.querySelector('#conversion_result');
+        let conversion_result = realBR.format(result);
+        conversion_result_tag.innerHTML = `Valor acumulado: ${conversion_result}`;
+    })
+
+    show_converter();
+}
+
+converter_button.addEventListener('click', converter);

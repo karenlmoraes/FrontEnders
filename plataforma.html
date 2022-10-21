@@ -61,41 +61,50 @@
         <div class="autoComplete_search" > 
             <b>lista de moedas</b>
             <ul class="autoComplete" id="autoComplete_list">
-                <li >bitcoin</li>
+                <li>bitcoin</li>
                 <li>ethereum</li>
                 <li>usd-coin</li>
             </ul>
         </div>
 
         <div id="details">
-            <img src="" alt="" id="image">
-            <h2 id="name"></h2>
-            <p id="description"></p>
-            <p id="hashing_algorithm"></p>
-            <p id="link"></p>
-            <p id="genesis_date"></p>
+          <img src="" alt="" id="image">
+          <h2 id="name"></h2>
+          <p id="description"></p>
+          <p id="hashing_algorithm"></p>
+          <p id="link"></p>
+          <p id="genesis_date"></p>
 
-            <h4 class="category_title">Categoria 1</h4>
-            <p id="market_cap_rank"></p>
-            <p id="current_price"></p>
-            <p id="ath"></p>
-            <p id="atl"></p>
+          <h4 class="category_title">Mercado</h4>
+          <p id="market_cap_rank"></p>
+          <p id="current_price"></p>
+          <p id="ath"></p>
+          <p id="atl"></p>
 
-            <h4 class="category_title">Categoria 2</h4>
-            <p id="max_supply"></p>
-            <p id="circulating_supply"></p>
+          <h4 class="category_title">Circulação</h4>
+          <p id="max_supply"></p>
+          <p id="circulating_supply"></p>
 
-            <h4 class="category_title">Categoria 3</h4>
-            <p id="twitter_followers"></p>
-            <p id="reddit_subscribers"></p>
+          <h4 class="category_title">Social</h4>
+          <p id="twitter_followers"></p>
+          <p id="reddit_subscribers"></p>
 
-            <h4 class="category_title">Categoria 4</h4>
-            <p id="forks"></p>
-            <p id="stars"></p>
-            <p id="subscribers"></p>
+          <h4 class="category_title">Desenvolvimento</h4>
+          <p id="forks"></p>
+          <p id="stars"></p>
+          <p id="subscribers"></p>
         </div>
+
         <div id="info">
             
+        </div>
+
+        <div id="converter">
+          <h4>Conversor</h4>
+          <input type="number" id="purchased_value" placeholder="Valor em reais" min="1">
+          <input type="text" id="date" placeholder="Data (Exemplo: 30-04-2021)">
+          <input type="button" value="Converter" id="converter_button">
+          <p id="conversion_result"></p>
         </div>
       </div>
     </main>
