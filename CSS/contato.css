@@ -105,12 +105,11 @@ span {
 }
 
 /*MAIN*/
-main{
-    height: 100vh;
-}
+
 .text-1 {
     background-color: #E33A3A;
     height: 150px;
+    
 }
 
 
@@ -126,9 +125,26 @@ main{
     max-width: 280px;
 }
 
-.foto{
-    background-color: #FFF689; 
+
+.figure a{
+    text-decoration: none;
+   color:#6C757D;
+   transition: 0.5s;
 }
+.figure b{
+   transition: 0.5s;
+}
+
+
+
+.figure a:hover{ 
+    color:#E33A3A;
+}
+
+.figure b:hover{ 
+    color:#E33A3A;
+}
+
 
 /* FOOTER  */
 
