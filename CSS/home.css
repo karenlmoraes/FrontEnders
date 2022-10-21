@@ -201,3 +201,19 @@ footer {
     color: #AC2C2C;
     transition: 0.3s;
 }
+
+/* Responsividade main  */
+
+@media(max-width:1000px){
+    .cont-2 {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:720px){
+    .cont-1 p {
+        color: black;
+        align-items: center;
+        width: 500px;
+    }
+}
