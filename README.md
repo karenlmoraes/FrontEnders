@@ -1,7 +1,7 @@
 # Segundo projeto em squad
 Projeto em grupo onde o objetivo foi construir um produto para a empresa FrontEnders.
 
-## Como executar
+## :gear: Como executar
 Acesse o projeto pelo GitHub Pages ou baixe e rode localmente na sua máquina.
 
 ## :desktop_computer: Ferramentas utilizadas
