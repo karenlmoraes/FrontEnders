@@ -11,6 +11,9 @@ Projeto em grupo onde o objetivo foi construir um produto para a empresa FrontEn
 
 ## :man_technologist: Integrantes
 [Igor Ferreira](https://github.com/IgorFerrer053)
+
 [Karen Lopes](https://github.com/karenlmoraes)
+
 [Matheus Cristhian](https://github.com/mcristhian)
+
 [Matheus Lisboa](https://github.com/MatokoLB)
