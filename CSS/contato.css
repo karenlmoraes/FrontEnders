@@ -9,54 +9,8 @@
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #AC2C2C;
-    padding: 20px 50px;
-}
-
-/* Botões padronizados */
-
-.btn-default {
-    background-color: #AC2C2C;
-    padding: 4px 50px;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-}
-
-.btn-default a {
-    color: white;
-    text-decoration: none;
-}
-
-.btn-default a:hover {
-    color: white;
-    transition: 0.3s;
-}
-
-.btn-default:hover {
-    background-color: #E33A3A;
-    transition: 0.3s;
-}
-
-/* LOGO  */
-
-.logo {
-    font-family: 'Pavanam', sans-serif;
-    font-weight: lighter;
-    font-size: 35px;
-    color: white;
-}
-
-span {
-    color: #FFF689;
+    padding: 20px 40px;
 }
 
 /* NAVBAR  */
